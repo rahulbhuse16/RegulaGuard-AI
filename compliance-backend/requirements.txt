@@ -22,9 +22,10 @@ langchain-core==0.3.10
 langgraph==0.2.34
 langchain-groq==0.2.0
 groq==0.11.0
+fastembed
+langchain-community
 
-# Embeddings (local, free, no external key needed by default)
-sentence-transformers==3.1.1
+
 
 # Document parsing
 pypdf==4.3.1
