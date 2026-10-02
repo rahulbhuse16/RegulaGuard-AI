@@ -43,8 +43,15 @@ class Settings(BaseSettings):
     EMBEDDING_DIM: int = 384
 
     # --- Storage ---
-    STORAGE_PROVIDER: str = "local"
     STORAGE_LOCAL_PATH: str = "./storage/documents"
+
+    STORAGE_PROVIDER: str = "cloudinary"
+
+    # Cloudinary
+    CLOUDINARY_CLOUD_NAME: str
+    CLOUDINARY_API_KEY: str
+    CLOUDINARY_API_SECRET: str
+
 
     # --- Misc ---
     LOG_LEVEL: str = "INFO"
