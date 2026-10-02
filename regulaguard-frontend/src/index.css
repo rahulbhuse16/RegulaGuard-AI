@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  /* Ink — primary navy scale (headers, sidebar, primary text) */
+  --color-ink-950: #0d1626;
+  --color-ink-900: #101b2d;
+  --color-ink-700: #24374f;
+  --color-ink-500: #4c6079;
+  --color-ink-300: #8f9fb3;
+  --color-ink-100: #d7dde5;
+
+  /* Vellum — cool paper surface (NOT warm cream) */
+  --color-vellum-50: #f4f5f2;
+  --color-vellum-100: #e9ebe6;
+  --color-vellum-200: #dde0d9;
+
+  /* Slate — secondary text */
+  --color-slate-600: #5b6b7e;
+  --color-slate-400: #8996a5;
+
+  /* Brass — the one accent: AI / attention / "seal" markers */
+  --color-brass-700: #7a5c17;
+  --color-brass-600: #8a6a1b;
+  --color-brass-100: #f1e6c8;
+
+  /* Status: compliant / effective */
+  --color-teal-700: #0b5a51;
+  --color-teal-600: #0e6e63;
+  --color-teal-100: #d7ece8;
+
+  /* Risk priority scale */
+  --color-crimson-700: #7a1f2b;
+  --color-crimson-100: #f3dde0;
+  --color-amber-700: #a15c1b;
+  --color-amber-100: #f3e3d0;
+  --color-ochre-600: #8a6d1b;
+  --color-ochre-100: #f1ecd3;
+  --color-moss-600: #3e6e52;
+  --color-moss-100: #dde9e0;
+
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Source Serif 4", ui-serif, Georgia, serif;
+
+  --radius-card: 0.25rem;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+  }
+  body {
+    @apply bg-vellum-50 text-ink-900 antialiased;
+  }
+  ::selection {
+    @apply bg-brass-100 text-ink-950;
+  }
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer utilities {
+  .focus-ring {
+    @apply outline-none focus-visible:ring-2 focus-visible:ring-brass-600 focus-visible:ring-offset-2 focus-visible:ring-offset-vellum-50;
+  }
+}

@@ -1,0 +1,8 @@
+import type { GapCategory, RiskPriority } from '@/types/enums'
+
+export const GAP_CATEGORIES: GapCategory[] = [
+  'OBLIGATION_UNMAPPED', 'CONTROL_MISSING', 'CONTROL_PARTIAL', 'CONTROL_INEFFECTIVE',
+  'EVIDENCE_MISSING', 'EVIDENCE_EXPIRED', 'EVIDENCE_CONFLICT', 'REGULATORY_CONFLICT', 'PROCESS_DEFICIENCY',
+]
+
+export const RISK_ORDER: RiskPriority[] = ['CRITICAL', 'HIGH', 'MEDIUM', 'LOW']
